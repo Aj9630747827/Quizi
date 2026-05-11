@@ -14,12 +14,12 @@ function Header() {
             </li>{" "}
             <li class="nav-item header-item">
               <a href="#" class="nav-link text-white">
-                Features
+                Start Quiz
               </a>
             </li>{" "}
             <li class="nav-item header-item">
               <a href="#" class="nav-link text-white">
-                Pricing
+                Categories
               </a>
             </li>{" "}
           </ul>{" "}
