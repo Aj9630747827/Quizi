@@ -16,3 +16,12 @@ body{
 .hero-section{
   color: white;
 }
+.footer{
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  min-width: 100vw;
+}
