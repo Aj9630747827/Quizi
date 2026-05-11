@@ -1,5 +1,5 @@
 body{
-  background-color:#0000001a
+  background-color:#0000001a;
 }
 .header{
   background-color: black;
@@ -21,7 +21,79 @@ body{
   color: white;
   text-align: center;
   padding: 10px;
-  position: fixed;
   bottom: 0;
+  left: 0;
+  margin-top: 50px;
   min-width: 100vw;
+}
+/* Quiz Card */
+.quiz-question {
+  background: white;
+  border-radius: 18px;
+  padding: 28px;
+  margin: 30px auto;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
+  max-width: 900px;
+}
+
+.quiz-question:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+/* Question Title */
+.question-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #212529;
+  margin-bottom: 25px;
+}
+
+/* Option List */
+.option-item {
+  border-radius: 12px !important;
+  margin-bottom: 15px;
+  padding: 16px 18px;
+  border: 2px solid #e9ecef !important;
+  transition: all 0.25s ease;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+.option-item:hover {
+  border-color: #0d6efd !important;
+  background-color: #f8fbff;
+  transform: scale(1.02);
+}
+
+/* Radio Button */
+.option-item input[type="radio"] {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+/* Label */
+.option-label {
+  margin-left: 10px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #343a40;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .question-title {
+    font-size: 1.2rem;
+  }
+
+  .quiz-question {
+    padding: 20px;
+  }
+}
+.hero-logo{
+  max-width: 130px;
+  width: 100%;
+  height: auto;
 }

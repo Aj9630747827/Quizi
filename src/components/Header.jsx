@@ -1,4 +1,8 @@
+import { useContext } from "react";
+import { TabContext } from "../store/TabContext";
+
 function Header() {
+  const { setCurrentTab } = useContext(TabContext);
   return (
     <>
       <div class="container header" style={{ width: "100vw" }}>
@@ -8,18 +12,22 @@ function Header() {
           <ul class="nav nav-pills">
             {" "}
             <li class="nav-item header-item">
-              <a href="#" class="nav-link text-white" aria-current="page">
+              <a
+                href="#"
+                class="nav-link text-white"
+                aria-current="page"
+                onClick={() => setCurrentTab("home")}
+              >
                 Home
               </a>
             </li>{" "}
             <li class="nav-item header-item">
-              <a href="#" class="nav-link text-white">
+              <a
+                href="#"
+                class="nav-link text-white"
+                onClick={() => setCurrentTab("quiz")}
+              >
                 Start Quiz
-              </a>
-            </li>{" "}
-            <li class="nav-item header-item">
-              <a href="#" class="nav-link text-white">
-                Categories
               </a>
             </li>{" "}
           </ul>{" "}
