@@ -1,5 +1,8 @@
+import { useContext } from "react";
 import logo from "../../assets/logo.png";
+import { TabContext } from "../../store/TabContext";
 function Hero() {
+  const { currentTab, setCurrentTab } = useContext(TabContext);
   return (
     <>
       <div
@@ -9,7 +12,7 @@ function Hero() {
         {" "}
         <div class="col-lg-6 mx-auto">
           {" "}
-          <img src={logo} alt="Logo" width="130" height="90" />
+          <img src={logo} alt="Logo" className="img-fluid hero-logo" />{" "}
           <h1 class="display-5 fw-bold text-white">
             Challenge Your Brain With Fun Quizzes
           </h1>{" "}
@@ -19,7 +22,11 @@ function Hero() {
           </p>{" "}
           <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
             {" "}
-            <button type="button" class="btn btn-primary btn-lg px-4 gap-3">
+            <button
+              type="button"
+              class="btn btn-primary btn-lg px-4 gap-3"
+              onClick={() => setCurrentTab("quiz")}
+            >
               Start Quiz{" "}
             </button>{" "}
             <button type="button" class="btn btn-outline-secondary btn-lg px-4">
