@@ -1,35 +1,52 @@
 import { useContext } from "react";
 import { TabContext } from "../store/TabContext";
+import { RoleContext } from "../store/RoleContext";
 
 function Header() {
   const { setCurrentTab } = useContext(TabContext);
+  const { role } = useContext(RoleContext);
   return (
     <>
-      <div class="container header" style={{ width: "100vw" }}>
+      <div className="container header" style={{ width: "100vw" }}>
         {" "}
-        <header class="d-flex justify-content-center py-3">
+        <header className="d-flex justify-content-center py-3">
           {" "}
-          <ul class="nav nav-pills">
+          <ul className="nav nav-pills">
             {" "}
-            <li class="nav-item header-item">
+            <li className="nav-item header-item">
               <a
                 href="#"
-                class="nav-link text-white"
+                className="nav-link text-white"
                 aria-current="page"
                 onClick={() => setCurrentTab("home")}
               >
                 Home
               </a>
             </li>{" "}
-            <li class="nav-item header-item">
-              <a
-                href="#"
-                class="nav-link text-white"
-                onClick={() => setCurrentTab("quiz")}
-              >
-                Start Quiz
-              </a>
-            </li>{" "}
+            {role === "null" ? (
+              <></>
+            ) : (
+              <li className="nav-item header-item">
+                <a
+                  href="#"
+                  className="nav-link text-white"
+                  onClick={() => setCurrentTab("quiz")}
+                >
+                  Start Quiz
+                </a>
+              </li>
+            )}
+            {role === "admin" && (
+              <li className="nav-item header-item">
+                <a
+                  href="#"
+                  className="nav-link text-white"
+                  onClick={() => setCurrentTab("addQuestion")}
+                >
+                  Add Question
+                </a>
+              </li>
+            )}
           </ul>{" "}
         </header>{" "}
       </div>
