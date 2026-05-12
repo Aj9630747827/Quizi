@@ -8,7 +8,7 @@ function QuizQuestion({ index, question, handleCorrectAnswer }) {
 
     setSelectedOption(option);
 
-    if (option === question.answer) {
+    if (option === question.correctAnswer) {
       handleCorrectAnswer();
     }
   }
@@ -16,11 +16,11 @@ function QuizQuestion({ index, question, handleCorrectAnswer }) {
   function getButtonClass(option) {
     if (!selectedOption) return "btn-outline-primary";
 
-    if (option === question.answer) {
+    if (option === question.correctAnswer) {
       return "btn-success";
     }
 
-    if (option === selectedOption && option !== question.answer) {
+    if (option === selectedOption && option !== question.correctAnswer) {
       return "btn-danger";
     }
 

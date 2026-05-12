@@ -1,7 +1,10 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import QuizQuestion from "./QuizQuestion";
+import { QuestionContext } from "../store/QuestionContext";
 
-function QuizPage({ questionList = [] }) {
+function QuizPage() {
+  const { questionList } = useContext(QuestionContext);
+
   const [score, setScore] = useState(0);
 
   function handleCorrectAnswer() {
