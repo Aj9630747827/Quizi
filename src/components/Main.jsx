@@ -12,7 +12,7 @@ function Main() {
         "The Babylonian Empire",
         "The Merovingian Empire",
         "The Persian Empire",
-        "TheAssyrian Empire",
+        "The Assyrian Empire",
       ],
       answer: "The Assyrian Empire",
     },
